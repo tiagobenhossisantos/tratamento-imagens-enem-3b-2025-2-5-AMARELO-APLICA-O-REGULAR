@@ -1,0 +1,1 @@
+# tratamento-imagens-enem-3b-2025-2-5-AMARELO-APLICA-O-REGULAR
