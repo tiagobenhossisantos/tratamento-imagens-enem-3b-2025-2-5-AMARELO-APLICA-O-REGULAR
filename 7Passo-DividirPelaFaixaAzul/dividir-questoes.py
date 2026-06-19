@@ -57,7 +57,7 @@ def encontrar_faixa_azul(imagem, cor_alvo, tolerancia=15, altura_faixa= 11 ): # 
         
         if faixa_encontrada:
             # Corta ANTES da faixa azul (no pixel anterior)
-            posicao_corte = y - 15  # CORREÇÃO: definir a variável
+            posicao_corte = y - 25  # CORREÇÃO: definir a variável
             if posicao_corte < 0:  # Evitar posições negativas
                 posicao_corte = 0
                 
@@ -124,11 +124,11 @@ def dividir_imagem_por_faixas(caminho_imagem, pasta_saida, cor_alvo):
         print(f"Salvo: {caminho_completo} ({secao.width}x{secao.height}px)")
 
 if __name__ == "__main__":
+    #caminho_imagem = "colunas_concatenadas_verticalmente.png"  # Substitua pelo caminho da sua imagem
+    #pasta_saida = "questoes_colunas" # Substitua pelo nome da pasta de saída desejada (questoes_colunas, pagina_15, pagina_28)
+
     caminho_imagem = "./inteiras/pagina_enem_29.png"  # Substitua pelo caminho da sua imagem
     pasta_saida = "pagina_29" # Substitua pelo nome da pasta de saída desejada (questoes_colunas, pagina_15, pagina_28)
-
-    #caminho_imagem = "./inteiras/pagina_enem_15.png"  # Substitua pelo caminho da sua imagem
-    #pasta_saida = "pagina_15" # Substitua pelo nome da pasta de saída desejada (questoes_colunas, pagina_15, pagina_28)
     
     # Converte a cor do GIMP 0a100 para RGB (0a255)
     cor_do_padrao = converter_cor_gimp_para_rgb(100.0, 98.8, 74.9) # COLOCAR O RGB CORRETO DA FAIXA QUE DIVIDE AS QUESTÕES (0a100 do GIMP)
